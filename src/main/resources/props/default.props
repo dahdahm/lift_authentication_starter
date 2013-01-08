@@ -3,6 +3,16 @@ db.url=jdbc:h2:/tmp/dev_liftopenid;AUTO_SERVER=TRUE
 db.user
 db.password
 user.home.dir=/tmp
-omniauth.facebooksecret=YOURSECRET
-omniauth.facebookkey=YOURKEY
+#Your key and secret here.
+omniauth.facebooksecret=SECRET
+omniauth.facebookkey=KEY
 omniauth.facebookpermissions=email,read_friendlists,read_stream  
+
+omniauth.twittersecret=SECRET
+omniauth.twitterkey=KEY
+omniauth.twitterpermissions=email,read_friendlists,read_stream  
+
+omniauth.githubsecret=SECRET
+omniauth.githubkey=KEY
+omniauth.githubpermissions=email,read_friendlists,read_stream  
+

@@ -1,3 +1,0 @@
-default.logback.xml [sets logging configuration.]
-default.props [Property file used in development mode.]
-production.default.props [Property file used in production.]
