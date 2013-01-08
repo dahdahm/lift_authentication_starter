@@ -81,7 +81,8 @@ class Boot extends Logger {
 
     LiftRules.setSiteMap(sitemap);
     
-       Omniauth.initWithProviders(List(new FacebookProvider("541418189202342", "f41ae132f0fce6326329ee1e193a7577")))
+       Omniauth.initWithProviders(List(new FacebookProvider("YOUR_FACEBOOK_KEY", "YOUR_FACEBOOK_SECRET")))
+// Set this in your facebook app.
     Omniauth.siteAuthBaseUrl="""http://localhost:8080/"""
 
     // TODO Move this to an external file.
