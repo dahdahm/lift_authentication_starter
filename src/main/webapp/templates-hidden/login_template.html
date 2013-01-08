@@ -1,0 +1,134 @@
+<html >
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+    <meta name="description" content="" >
+    <meta name="keywords" content="" >
+
+    <title class="lift:Menu.title">Lift Web Framework: %*%</title>
+
+  <style class="lift:CSS.blueprint"></style>
+  <style class="lift:CSS.fancyType" ></style>
+  <link type="text/css" rel="stylesheet" href="/style/openid.css" />
+  <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
+  <script id="json" src="/classpath/json.js" type="text/javascript"></script>
+<script type="text/javascript" src="/scripts/openid-jquery.js"></script>
+	<script type="text/javascript" src="/scripts/openid-en.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			openid.init('openid_identifier');
+			//openid.setDemoMode(true); //Stops form submission for client javascript-only test purposes
+		});
+	</script>
+
+
+  <style type="text/css">
+    /* <![CDATA[ */
+    .widget {
+      border:1px solid #ccc;
+      background:#f5f5f5;
+      padding:5px;
+      margin:10px 0 0 0;
+      font-size:8pt;
+    }
+
+    .sidebar ul {
+      margin: 10px 0 0 0;
+      padding: 5px;
+      border-bottom:1px solid #ccc;
+    }
+
+
+    .sidebar ul li {
+      margin:0;
+      padding:0;
+      list-style:none;
+      border:1px solid #ccc;
+      border-bottom:none;
+    }
+
+    .sidebar ul li ul li {
+      margin:0;
+      padding:0;
+      border-style: none;
+      list-style-type: square;
+      list-style-position: inside;
+      padding-left: 10px;
+
+    }
+
+    .sidebar ul li ul li a {
+      display: inline;
+    }
+
+    .sidebar ul li ul {
+      margin: 0;
+      border-bottom: none;
+    }
+
+    .sidebar ul li ul li span {
+      display:inline;
+      padding:0px;
+    }
+
+
+    .sidebar ul li a {
+      display:block;
+      padding:3px;
+      text-indent:10px;
+      text-decoration:none;
+    }
+
+    .sidebar ul li span {
+      display:block;
+      padding:3px;
+      text-indent:10px;
+      text-decoration:none;
+    }
+
+
+    .sidebar ul li a:hover {
+      background-color: #eee;
+    }
+
+.lift_error {
+  color: red;
+}
+
+.lift_warning {
+  color: yellow;
+}
+
+.lift_notice {
+}
+  /* ]]> */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column span-10">
+      <!-- img could go here -->
+
+    </div>
+    <div class="column span-1 last" style="float:right"><img alt="" id="ajax-loader" style="display:none" src="/images/ajax-loader.gif"></img>
+    </div>
+    <hr>
+    <div class="column span-6 colborder sidebar">
+      <lift:menu.builder></lift:menu.builder>
+    </div>
+    <div class="lift:msgs"></div>
+
+    <div class="column span-17 last">
+      <lift:bind name="content"></lift:bind>
+    </div>
+
+    <hr >
+    <div class="column span-23 last" style="text-align: center">
+      <h4 class="alt"><a href='http://liftweb.net'><i>Lift</i></a> is Copyright 2007-2010 WorldWide Conferencing, LLC.  Distributed under an Apache 2.0 License.
+        <br>
+        Lift version <span class="lift:version_info.lift"></span> built on <br class="lift:version_info.date">.
+        <br>
+      </h4>
+    </div>
+  </div>
+</body>
+</html>

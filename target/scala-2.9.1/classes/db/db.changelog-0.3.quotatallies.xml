@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet author="lift" id="4">
+        <createTable tableName="quotatallies ">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="users_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quota_type" type="varchar(8)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bytes_in_used" type="float">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bytes_out_used" type="float">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bytes_xfer_used" type="float">
+                <constraints nullable="false"/>
+            </column>
+            <column name="files_in_used" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="files_out_used" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="files_xfer_used" type="int">
+                <constraints nullable="false"/>
+            </column>
+	    <column defaultValueComputed="CURRENT_TIMESTAMP" name="createdon" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>	   
+        </createTable>
+         <addForeignKeyConstraint constraintName="fk_users_quotatallies"
+	    baseTableName="quotatallies" baseColumnNames="users_id"
+	    referencedTableName="users" referencedColumnNames="id"
+       	    deleteCascade = "true"
+	 />
+    </changeSet>
+</databaseChangeLog>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="testEnvEntry" class="org.eclipse.jetty.plus.jndi.EnvEntry">
+      <Arg></Arg>
+          <Arg>testValue</Arg>
+          <Arg type="java.lang.String">It works</Arg>
+          <Arg type="boolean">true</Arg>
+    </New>
+
+   <New id="DbNameDataSource" class="org.eclipse.jetty.plus.jndi.Resource">
+       <Arg>java:comp/env/jdbc/liquibase</Arg>
+       <Arg>
+       <New class="com.mchange.v2.c3p0.ComboPooledDataSource">
+             <Set name="driverClass">org.h2.Driver</Set>
+             <Set name="jdbcUrl">jdbc:h2:/tmp/dev_proftpd;AUTO_SERVER=TRUE</Set>
+             <Set name="user"></Set>
+             <Set name="password"></Set>
+       </New>
+       </Arg>
+   </New>
+
+</Configure>
+

@@ -1,0 +1,91 @@
+<!--  This template is used when deleting an FTP user -->
+<lift:surround with="default_wide" at="content">
+	<span class="text-error">
+	<h2>
+	<span class="lift:Loc?locid=msg.deleteAccountWarning">[You are deleting an FTP account. This action can not be undone.]</span>
+	</h2></span>
+
+	<div data-lift="DeleteUser.delete?form=POST">
+
+		<table class="table table-striped table-bordered table-hover">
+			<tr>
+				<td><span class="lift:Loc?locid=field.firstName">[First Name]</span></td>
+				<td><user:firstname /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.lastName">[Last Name]</span></td>
+				<td><user:lastname /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.userName">[User Name]</span></td>
+				<td><user:username /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.password">[Password]</span></td>
+				<td><user:password /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.company">[Company]</span></td>
+				<td><user:company /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.department">[Department]</span></td>
+				<td><user:department /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.email">[Email]</span></td>
+				<td><user:email /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.quota">[Quota]</span></td>
+				<td><user:quota /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.quotaUsed">[Quota Used]</span></td>
+				<td><user:quotaused /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.homeDir">[Home Directory]</span></td>
+				<td><user:homedir /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.createdOn">[Created On]</span></td>
+				<td><user:createdon /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.comments">[Comments]</span></td>
+				<td><user:comments /></td>
+			</tr>
+			<tr>
+				<td><span class="lift:Loc?locid=field.userFiles">[User files]</span></td>
+				<td>
+					<table>
+						<thead>
+							<tr lift="DeleteUser.hasFiles">
+								<th><span class="lift:Loc?locid=field.fileName">[File Name]</span></th>
+								<th><span class="lift:Loc?locid=field.size">[Size]</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr lift="DeleteUser.listFiles">
+								<td><file:path /></td>
+								<td><file:size /></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<span class="text-warning">
+		
+		<span class="lift:Loc?locid=msg.deleteAccountInfoPre">[deleteAccountInfoPre]</span>
+		<strong>
+		<user:username />
+		</strong>
+		 <span class="lift:Loc?locid=msg.deleteAccountInfoPost">[deleteAccountInfoPost]</span>
+		<strong>"<user:examplename />"
+		</strong>
+		</span><br>
+		<user:submit />
+	</div>
+</lift:surround>

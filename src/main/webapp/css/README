@@ -1,0 +1,13 @@
+Do not write comments or modify any external libraries, only write css code in main.css
+This readme needs to be updated everytime we add/remove a css file.
+
+The following css files are used by bootstrap.
+They should never be changed/modified unless we are upgrading the version of bootstrap.
+	[source: http://twitter.github.com/bootstrap/]
+	bootsrap.css     	[Main css api for bootstrap, not needed when deploying]
+	bootstrap.min.css   [Minified css file]
+	bootsrap-responsive.css [Main css api for responsive bootstrap http://twitter.github.com/bootstrap/scaffolding.html#responsive
+							not needed when deploying]
+	bootstrap-responsive.min.css   [ Minified css file]
+	
+	main.css [Main css file, this is the only place developer should write their own css]

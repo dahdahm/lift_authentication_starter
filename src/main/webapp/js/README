@@ -1,0 +1,14 @@
+Do not write comments or modify any external libraries, only write js code in main.js
+This readme needs to be updated everytime we add/remove a javascript file.
+
+All the files under "vendor" are required by bootstrap libraries.
+They should never be changed/modified unless we are upgrading the version of bootstrap.
+	[source: http://twitter.github.com/bootstrap/]
+	vendor->bootsrap.js     	[Main js api for bootstrap  http://twitter.github.com/bootstrap/javascript.html]
+	vendor->bootstrap.min.js    [ Minified js file]
+	vendor->jquery-1.8.3.min.js [ Jquery module that is used in this version of bootstrap]
+	vendor->modernizr-2.6.2-respond-1.1.0.min.js [Used by bootstrap in its responsive-design modules, http://modernizr.com/]
+
+	jquery.jstepper.min.js 		[Jquery plugin. Source: http://jstepper.emkay.dk/  Used to enforce integer values and ranges on an input ]
+	jquery.tablesorter.min.js	[Jquery plugin. Source: http://tablesorter.com/docs/ Used to add sorting capabilities to tables.]
+	main.js [Main javascript file, this is the only place developer should write their own js]

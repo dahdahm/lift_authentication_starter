@@ -1,0 +1,25 @@
+<!--  Embed this in all pages that need to display the base menu.  -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse"
+				data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span>
+			</a> 
+			<a class="brand" href="#"><span class="lift:Loc?locid=menu.logotext">[Lift auth starter]</span></a>
+			<div class="nav-collapse collapse">
+				<!-- create the 'main' menu items -->
+				<span data-lift="lift:TBNav.menuToTBNav?eager_eval=true">
+					<span data-lift="lift:Menu.builder?top:class=nav;li_item:class=active;linkToSelf=true;expandAll=true;group=public"></span>
+				</span>
+				<span class="nav pull-right"> <!-- create the 'user' (e.g. login/logout etc) menu items -->
+					<span data-lift="lift:TBNav.menuToTBNav?eager_eval=true">
+						<span data-lift="lift:Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=user"></span>
+					</span>
+					<span id="languages" class="lift:L.languageSelect">Language Selector</span>
+				</span>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+</div>

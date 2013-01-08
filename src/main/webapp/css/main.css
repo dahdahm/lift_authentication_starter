@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Sticky footer styles-------------------------------------------------- */
+html,body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	margin-top: 30px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -60px;
+	min-height: 100%;
+}
+
+/* Set the fixed height of the footer here */
+#push,#footer {
+	height: 60px;
+}
+
+#footer {
+	background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media ( max-width : 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+/* END Sticky footer styles-------------------------------------------------- */
+
+/* Custom page CSS
+      -------------------------------------------------- */
+
+.container .credit {
+	margin: 20px 0;
+}
+
+/* use this when you wrap a select element to an input field, ex Quota field in Create user. */
+.wrap-select {
+	background: transparent;
+	border: none;
+	width: 60px;
+	padding: 0px;
+	font-size: 20px;
+	margin: 0px;
+}
+/* Use this when an integer input field is has another field appended to it */
+.wrap-integer {
+	width: 136px;
+}
+
+#lift__noticesContainer__ {
+	margin: 10px 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+
+#lift__noticesContainer__ div ul li {
+	list-style-type: none;
+	padding: 0px;
+	margin: 1px, 1px, 1px, 1px;
+}
+
+#lift__noticesContainer__ div ul {
+	margin: 0px;
+	list-style-type: none;
+}
+
+#lift__noticesContainer___error ul li {
+	color: #D8000C;
+	background-color: #FFBABA;
+}
+
+#lift__noticesContainer___notice ul li {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+
+#lift__noticesContainer___warning ul li {
+	color: #9F6000;
+	background-color: #FEEFB3;
+}
+
+/* Used to remove decoration from an href element, used in href elements that use the "btn" class to behave as a button */
+.nolink a {
+	text-decoration: none;
+	color: white;
+}
+
+/* Used when displaying error messages next to input fields */
+.edit_error_class {
+	color: #D8000C;
+	background-color: #FFBABA;
+	display: block;
+}
+
+/* Overriding Bootstrap  CSS
+      -------------------------------------------------- */
+/* Use this for logo
+.navbar-inverse .brand
+{
+  background: url(/images/glyphicons-halflings.png) no-repeat left center;
+  height: 20px;
+  width: 100px;
+}*/
+
+/* Used to add margin to the dropdown caret in menus */
+.dropdown .caret {
+margin-left: 8px;
+}
+
+/* Used to stop table header column names from wrapping to a new line */
+.nowrap{
+	white-space: nowrap;
+	font-size: 11px;
+
+}
+
+.smallheader{
+	font-size: 10px;
+}
+
+/* Table sorter */
+
+table.tablesorter {
+	margin:10px 0pt 15px;
+	padding:0px 2px 0px 0px;
+	width: 100%;
+	
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	padding: 4px 20px 4px 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	padding: 4px;
+	vertical-align: top;
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+/* END Table sorter */
+
+
+#facebook_btn
+{ 
+background-image:url('/images/facebooklogin.png');
+width: 10%; /* Will shrink image to 30% of its original width */
+  height: auto;  
+
+}

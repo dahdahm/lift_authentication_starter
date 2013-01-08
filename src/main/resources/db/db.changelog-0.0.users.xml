@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet author="lift" id="1">
+        <createTable tableName="usersftp">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="userid" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="passwd" type="varchar(80)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uid" type="int">
+            </column>
+            <column name="gid" type="int">
+            </column>
+            <column name="homedir" type="varchar(255)">
+            </column>
+            <column name="shell" type="varchar(255)">
+            </column>
+            <column name="firstname" type="varchar(255)">
+            </column>
+            <column name="lastname" type="varchar(255)">
+            </column>
+	    <column defaultValueComputed="CURRENT_TIMESTAMP" name="createdon" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updatedon" type="TIMESTAMP">
+            </column>
+	    <column name="comments" type="VARCHAR(256)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
+

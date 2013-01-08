@@ -1,0 +1,42 @@
+<!--  
+Use this page if you want your content to display:
+NAVBAR on top
+QUICKLINKS to the left
+BREADCRUMBS on top of the content.
+
+The quicklinks will be on the right and will use 3/12th of the available page width.
+content will use 9/12th of the availablepage width. 
+Used for example in the home page "index.html"
+ -->
+<span class="lift:surround?with=_header_footer;at=default_content">
+	<span class="lift:embed?what=_navbar">NAVBAR</span>
+	<div id="wrap">
+		<!-- This wrap is used to have a sticky footer -->
+		<div class="container-fluid">
+		<img alt="" id="ajax-loader" style="display: none; margin-bottom: 0px; margin-left: 5px" src="/images/ajax-loader.gif">
+			<div class="row-fluid">
+				<span class="lift:embed?what=_margin">MARGIN LEFT</span>
+				<div class="span10">
+					<div class="row-fluid">
+						<div class="span3">
+							<span class="lift:embed?what=_quicklinks">QUICKLINKS</span>
+						</div>
+						<!--/span-->
+
+						<div class="span9">
+							<div class="row-fluid">
+								<div class="lift:Msgs?showAll=true span12"></div>
+							</div>
+							<span class="lift:embed?what=_breadcrumbs">BREADCRUMBS</span>
+
+							<div id="content">The main content will get bound here</div>
+						</div>
+					</div>
+				</div>
+				<span class="lift:embed?what=_margin">MARGINRIGHT</span>
+			</div>
+		</div>
+		<!--/.fluid-container-->
+		<div id="push"></div>
+	</div>
+</span>
