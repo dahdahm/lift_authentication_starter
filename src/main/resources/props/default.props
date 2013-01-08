@@ -2,5 +2,7 @@ db.driver=org.h2.Driver
 db.url=jdbc:h2:/tmp/dev_liftopenid;AUTO_SERVER=TRUE
 db.user
 db.password
-
 user.home.dir=/tmp
+omniauth.facebooksecret=YOURSECRET
+omniauth.facebookkey=YOURKEY
+omniauth.facebookpermissions=email,read_friendlists,read_stream  

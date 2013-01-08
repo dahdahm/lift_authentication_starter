@@ -65,7 +65,7 @@ class Boot extends Logger {
     Schemifier.schemify(true, Schemifier.infoF _, User)
 
     // Logged in test, used to enable/disable pages from logged-in/logged-out users. 
-    //TODO: Enable after fixign authentication through facebook
+    //TODO: Enable after fixing authentication through facebook
     //val loggedIn = If(() => User.loggedIn_?, () => RedirectResponse("/user_mgt/login"))
      val loggedIn = If(() => true, () => RedirectResponse("/user_mgt/login"))
 
@@ -80,8 +80,8 @@ class Boot extends Logger {
           "Static Content"))) ::: Omniauth.sitemap): _*)
 
     LiftRules.setSiteMap(sitemap);
-    
-       Omniauth.initWithProviders(List(new FacebookProvider("YOUR_FACEBOOK_KEY", "YOUR_FACEBOOK_SECRET")))
+   
+       Omniauth.init//WithProviders(List(new FacebookProvider("541418189202342", "25ce934584ff2c78996d26f80b89ab52")))
 // Set this in your facebook app.
     Omniauth.siteAuthBaseUrl="""http://localhost:8080/"""
 
