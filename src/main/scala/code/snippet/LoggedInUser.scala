@@ -28,10 +28,15 @@ class LoggedInUser {
     Omniauth.currentAuth match {
       case Full(omni) => ({
         
-    	  val user = new User;
+    	  val user = User.create
     	  
-    	  user.email("tesat")
-    	  user.nickname("what")
+    	  user.email(omni.email.get)
+    	  user.save
+    	  
+    	  User.logUserIn(user)
+    	  
+    	  
+    	  user.nickname(omni.name)
     	  user.save
         
         <div>

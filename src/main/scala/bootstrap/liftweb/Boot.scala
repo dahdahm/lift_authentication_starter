@@ -74,17 +74,19 @@ class Boot extends Logger {
 
     def sitemap() = SiteMap((
       List(
-        authmenus, // Simple menu form
-        // Menu with special Link
-        Menu(Loc("Static", Link(List("static"), true, "/static/index"),
-          "Static Content"))) ::: Omniauth.sitemap): _*)
+        authmenus, 
+        Menu(Loc("Static", Link(List("static"), true, "/static/index"), "Static Content")),
+        Menu(Loc("processoauth", Link(List("processoauth"), true, "/processoauth/"), "processoauth"))
+          
+      ) ::: Omniauth.sitemap): _*)
 
     LiftRules.setSiteMap(sitemap);
    
+    
        Omniauth.init//WithProviders(List(new FacebookProvider("541418189202342", "25ce934584ff2c78996d26f80b89ab52")))
 // Set this in your facebook app.
     Omniauth.siteAuthBaseUrl="""http://localhost:8080/"""
-
+Omniauth.successRedirect = """http://localhost:8080/processoauth"""
     // TODO Move this to an external file.
     //Localization block
     /**
